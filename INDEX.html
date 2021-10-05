@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+  <style>
+  /* Custom properties/variables  */
+
+  :root {
+  --main-white: #000000;
+  --main-red: #ffdfd3;
+  --main-blue: #FFC0CB;
+  --main-gray: #85e3ff;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Base styles */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  
+}
+
+h1{
+  font-size: 4.1rem;
+  font-family: cursive;
+  color: #FFA500;
+}
+}
+
+h2 {
+  font-size: 4.2rem;
+  
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* nav */
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+
+/* Welcome section */
+
+
+.welcome-section{
+  text-align: center;
+  padding: 15rem 15rem;
+  background: var(--main-white);
+}
+.welcome-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  
+}
+.welcome-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+.welcome-tile > p{
+  color: #FFFFFF;
+  font-family: Courier;
+  text-align: left;
+  padding: 1rem;
+}
+
+
+  
+/* Projects section */
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--main-blue);
+}
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+  font-family: Courier;
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  font-family: cursive;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    
+  }
+}
+
+.project {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  color: #ff7f50;
+}
+
+
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+.btn contact-links
+
+/* Contact section */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+ background: var (--main-gray);
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
+    
+    
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+  
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+
+  
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+  
+footer {
+    text-align: center;
+    padding: 50px;
+  font-family: courier;
+  font-size: 20px:
+}
+
+
+  </style>
+</head>
+<body>
+  
+</head>
+<body>
+  <!-- START NAV -->
+
+<nav id="navbar" class="nav">
+  <ul class="nav-list">
+    <li>
+      <a href="#welcome">About</a>
+    </li>
+    <li>
+      <a href="#projects">Work</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- END NAV -->
+
+<!-- START WELCOME SECTION -->
+
+<section id="welcome" class="welcome-section">
+
+<div class="welcome-grid">
+  <a
+      href=""
+      target="_blank"
+      class="welcone welcome-tile"
+    >
+      <img
+        class="welcome-image"
+        src="one.jpg"
+        alt="one"
+      />
+      <p class="welcome-title">
+        <h1>Hello, I'm Mariz Marquez</h1>
+          <p>I'm currently in my third year of college majoring in Multimedia. I'm also one of the city's scholars. I love dogs and cats and also I'm a Kpop fangirl. I'm also a huge fan of Lee Min Ho since boys over flowers till now. Reading Wattpad, watching k-drama and movies are part of my hobbies. Badminton is the sport that, I like. I'm not that good at coding/programming but I will do my best to give you a good output, though not that best, but I am still worth it because it comes to hard work.</p>
+      </p>
+
+</section>
+
+<!-- END WELCOME SECTION -->
+
+<!-- START PROJECTS SECTION -->
+
+<section id="projects" class="projects-section">
+  <h2 class="projects-section-header">My latest work</h2>
+
+  <div class="projects-grid">
+  <a
+      href=""
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="three.jpeg"
+        alt="three"
+        >
+        <img 
+        class="project-image" 
+        src="four.jpeg" alt="jpeg"
+      />
+      <p class="Project project-title">
+       <span>Logo</span>
+        
+      </p>
+    <a
+      href=""
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="five.jpg"
+        alt="five"
+      />
+      <p class="project-title">
+        <span>Landing Page</span></span>
+        
+        
+      </p>
+      
+       <a
+      href=""
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="two.png"
+        alt="two"
+      />
+      <p class="project-title">
+        <span>frame</span>
+        
+      </p>
+    <a
+      href=""
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="six.jpg"
+        alt="six"
+      />
+      <p class="project-title">
+        <span>Python Set</span>
+        
+       
+      </p>
+        
+        
+     
+    </a>
+  </div>
+
+</section>
+
+<!-- END PROJECTS SECTION -->
+
+<section id="contact" class="contact-section">
+  <div class="contact-section-header">
+    
+  </div>
+  <div class="contact-links">
+    <a
+      href="https://www.facebook.com/solovelynite"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fab fa-facebook"></i> Facebook</a
+    >
+    
+    <a href="https://mail.google.com/mail/mu/mp/400/#mn" 
+class="btn contact-details"
+      ><i class="fas fa-at"></i> Send a mail</a
+    >
+  </div>
+</section>
+
+</main>
+        <footer>
+            © Copyright, 2021
+        </footer>
+
+</body>
+</html>
